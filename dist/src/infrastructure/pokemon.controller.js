@@ -24,7 +24,7 @@ let PokemonController = class PokemonController {
     getPokemones(body) {
         return this.listarService.listarPokemones();
     }
-    getHabilidadPokemone(_namePokemon) {
+    getHabilidadPokemon(_namePokemon) {
         return this.habilidadService.habilidadPokemon(_namePokemon);
     }
 };
@@ -43,7 +43,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
-], PokemonController.prototype, "getHabilidadPokemone", null);
+], PokemonController.prototype, "getHabilidadPokemon", null);
 PokemonController = __decorate([
     (0, common_1.Controller)('pokemon'),
     __metadata("design:paramtypes", [listarPokemones_service_1.ListarPokemonesService, habilidadPokemon_service_1.HabilidadService])
