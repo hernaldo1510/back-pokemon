@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "c44250ea-134d-4d16-9ce2-453f105d4885",
+		"name": "BancoEstado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5769052"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/pokemon/getPokemones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pokemon/getPokemones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pokemon",
+						"getPokemones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "habilidades Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "namePokemon",
+						"value": "bulbasaur",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/pokemon/gethabilidadPokemon?namePokemon=bulbasaur",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pokemon",
+						"gethabilidadPokemon"
+					],
+					"query": [
+						{
+							"key": "namePokemon",
+							"value": "bulbasaur"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

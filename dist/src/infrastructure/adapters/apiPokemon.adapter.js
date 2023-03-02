@@ -16,14 +16,14 @@ const rxjs_1 = require("rxjs");
 let apiPokemonAdapter = class apiPokemonAdapter {
     constructor(httpService) {
         this.httpService = httpService;
+        this.url = 'https://pokeapi.co/api/v2/pokemon/';
     }
     getPokemones() {
-        return this.httpService.get('https://pokeapi.co/api/v2/pokemon').pipe((0, rxjs_1.map)((res) => { return res.data; }));
+        return this.httpService.get(this.url).pipe((0, rxjs_1.map)((res) => { return res.data; }));
     }
     getHabilidadPokemon(namePokemon) {
         let pokemon = namePokemon;
-        console.log(pokemon);
-        return this.httpService.get('https://pokeapi.co/api/v2/pokemon/' + pokemon).pipe((0, rxjs_1.map)((res) => { return res.data.abilities; }));
+        return this.httpService.get(this.url + pokemon).pipe((0, rxjs_1.map)((res) => { return res.data.abilities; }));
     }
 };
 apiPokemonAdapter = __decorate([

@@ -1,6 +1,6 @@
 API-BACK-POKEMON
 ## Description
-Esta Api fue desarrollada bajo la premisa de Arquitectura limpia, especificamente patron Hexagonal, para poder realizar diferentes funcionalidades con los pokemones obtenidos, para que dicha pokedex pueda tener otras funcionalidades a futuro. Por ahora esta api permite listar la totalidad de pokemones junto con poder mostrar las habilidades de un pokemon seleccionado
+Esta Api fue desarrollada bajo la premisa de Arquitectura limpia, especificamente patron Hexagonal, para poder realizar diferentes funcionalidades con los pokemones obtenidos, para que dicha pokedex pueda tener otras funcionalidades a futuro. Por ahora esta api permite listar la totalidad de pokemones junto con poder mostrar las habilidades de un pokemon seleccionado.
 .
 Para esto se utilzo el siguiente Framework Back:
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -43,9 +43,11 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Hernaldo Castro]
+
+## Swagger
+- npm run start
+- [obtener contrato](http://localhost:3000/api)
 
 ## License
 
