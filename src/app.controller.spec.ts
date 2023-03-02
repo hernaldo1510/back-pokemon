@@ -1,22 +1,28 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PokemonController } from './infrastructure/pokemon.controller';
 import { ListarPokemonesService } from './application/listarPokemones.service';
+import { HabilidadService } from './application/habilidadPokemon.service';
+import { PokemonPort } from './domain/pokemon.port';
+import { response } from 'express';
 
-describe('AppController', () => {
-  let appController: PokemonController;
+describe('Api Pokemon Controller', () => {
+  let pokemonController: PokemonController;
+  let habilidadService: HabilidadService;
+  let listarPokemonesService: ListarPokemonesService;
+  let pokemonPort: PokemonPort;
 
-  beforeEach(async () => {
-    const app: TestingModule = await Test.createTestingModule({
-      controllers: [PokemonController],
-      providers: [ListarPokemonesService],
-    }).compile();
+  beforeEach(async() => {
+    habilidadService: new HabilidadService(pokemonPort); 
+    listarPokemonesService: new ListarPokemonesService(pokemonPort); 
+    appController: new PokemonController( listarPokemonesService, habilidadService);
 
-    appController = app.get<PokemonController>(PokemonController);
   });
 
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getPokemones('Hello World!')).toBe('Hello World!');
+  describe('habilidadPokemon', () => {
+    it('should return an array pokemon"', async () => {
+    const result= ['test'];
+    jest.spyOn(habilidadService,'habilidadPokemon').mockImplementation(()=> result)
+      expect(pokemonController.getPokemones(listarPokemonesService)).toBe(result);
     });
   });
 });

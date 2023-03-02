@@ -14,7 +14,7 @@ export class PokemonController {
   
   @Get('getHabilidadPokemon')
   @HttpCode(200)
-  getHabilidadPokemone(@Query('namePokemon') _namePokemon: string) { 
+  getHabilidadPokemon(@Query('namePokemon') _namePokemon: string) { 
     return this.habilidadService.habilidadPokemon(_namePokemon);
   }
 }

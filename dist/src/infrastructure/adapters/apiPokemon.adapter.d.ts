@@ -6,6 +6,7 @@ import { PokemonResponseDto } from "src/domain/pokemon.response.dto";
 export declare class apiPokemonAdapter implements PokemonPort {
     private readonly httpService;
     constructor(httpService: HttpService);
+    url: string;
     getPokemones(): Observable<AxiosResponse<PokemonResponseDto>>;
     getHabilidadPokemon(namePokemon: any): Observable<AxiosResponse<PokemonResponseDto>>;
 }
